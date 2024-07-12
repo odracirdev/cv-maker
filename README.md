@@ -1,30 +1,110 @@
-# React + TypeScript + Vite
+# 📄 CV Maker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CV Maker es una aplicación que **te ayudará a crear un CV de alto impacto para tu próxima postulación laboral.** ¿No tienes idea de cómo crear un CV? ¿Quieres optimizar tu CV actual? **¿Quieres conseguir tu primer empleo?** ¡CV Maker te ayudará!
 
-Currently, two official plugins are available:
+## ✔️ Uso
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Asegúrate de tener instalada una versión reciente de Node.js.
+2. Clona el repositorio `git clone git@github.com:odracirdev/cv-maker.git`.
+3. Instala las dependencias `pnpm i`.
+4. Ejecuta la aplicación `pnpm dev`.
 
-## Expanding the ESLint configuration
+### 🧰 Tecnologías
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<div align="center">
+<a href="https://vitejs.dev/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/Vite-282C34?style=for-the-badge&logo=vite&labelColor=646CFF&logoColor=FFF" alt="Vite logo" title="Vite" />
+</a>
+<a href="https://expressjs.com/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/Express.js-282C34?style=for-the-badge&logo=express&labelColor=000&logoColor=FFF" alt="Express JS logo" title="Express JS" />
+</a>
+<a href="https://es.react.dev/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/React-282C34?style=for-the-badge&logo=react&labelColor=61DAFB&logoColor=fff" alt="React logo" title="React" />
+</a>
+<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/Typescript-282C34?style=for-the-badge&logo=typescript&labelColor=007ACC&logoColor=fff" alt="TypeScript logo" title="TypeScript" />
+</a>
+<a href="https://ui.shadcn.com/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/Shadcn/UI-282C34?style=for-the-badge&logo=shadcnui&labelColor=000&logoColor=fff" alt="shadcn/ui logo" title="shadcn/ui" />
+</a>
+</div>
 
-- Configure the top-level `parserOptions` property like this:
+## 🚧 Contribuidores
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://anarangel.github.io">
+        <img src="https://github.com/anarangel.png" width="80" />
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/odracirdev">
+         <img src="https://avatars.githubusercontent.com/u/71223579" width="80" />
+       </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/felixicaza">
+         <img src="https://github.com/felixicaza.png" width="80" />
+       </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/colmedev">
+         <img src="https://avatars.githubusercontent.com/u/161905693" width="80" />
+       </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">Ana Rangel</td>
+    <td align="center">Facundo D'Andrea</td>
+    <td align="center">Felix Icaza</td>
+    <td align="center">Miguel Colmenarez</td>
+  </tr>
+  </tr>
+  <tr>
+    <td align="center"><img alt="GitHub followers" src="https://img.shields.io/github/followers/anarangel?style=social"></td>
+    <td align="center"><img alt="GitHub followers" src="https://img.shields.io/github/followers/Facundodandrea?style=social"></td>
+    <td align="center"><img alt="GitHub followers" src="https://img.shields.io/github/followers/felixicaza?style=social"></td>
+    <td align="center"><img alt="GitHub followers" src="https://img.shields.io/github/followers/colmedev?style=social"></td>
+  </tr>
+  <tr>
+    <td align="center"><img alt="GitHub User's stars" src="https://img.shields.io/github/stars/anarangel?style=social"></td>
+    <td align="center"><img alt="GitHub User's stars" src="https://img.shields.io/github/stars/Facundodandrea?style=social"></td>
+    <td align="center"><img alt="GitHub followers" src="https://img.shields.io/github/stars/felixicaza?style=social"></td>
+    <td align="center"><img alt="GitHub followers" src="https://img.shields.io/github/stars/colmedev?style=social"></td>
+  </tr>
+</table>
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/omaaraguirre">
+         <img src="https://github.com/omaaraguirre.png" width="80" />
+       </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/jagcruz">
+         <img src="https://github.com/jagcruz.png" width="80" />
+       </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/odracirdev">
+         <img src="https://github.com/odracirdev.png" width="80" />
+       </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">Omar Aguirre</td>
+    <td align="center">Jaime Gutiérrez</td>
+    <td align="center">Ricardo Cuauro</td>
+  </tr>
+  <tr>
+    <td align="center"><img alt="GitHub followers" src="https://img.shields.io/github/followers/omaaraguirre?style=social"></td>
+    <td align="center"><img alt="GitHub followers" src="https://img.shields.io/github/followers/jagcruz?style=social"></td>
+    <td align="center"><img alt="GitHub followers" src="https://img.shields.io/github/followers/odracirdev?style=social"></td>
+  </tr>
+  <tr>
+    <td align="center"><img alt="GitHub User's stars" src="https://img.shields.io/github/stars/omaaraguirre?style=social"></td>
+    <td align="center"><img alt="GitHub followers" src="https://img.shields.io/github/stars/jagcruz?style=social"></td>
+    <td align="center"><img alt="GitHub User's stars" src="https://img.shields.io/github/stars/odracirdev?style=social"></td>
+  </tr>
+</table>
