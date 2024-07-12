@@ -11,7 +11,7 @@ CV Maker es una aplicación que **te ayudará a crear un CV de alto impacto para
 
 ### 🧰 Tecnologías
 
-<div align="center">
+<p align="center">
 <a href="https://vitejs.dev/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/Vite-282C34?style=for-the-badge&logo=vite&labelColor=646CFF&logoColor=FFF" alt="Vite logo" title="Vite" />
 </a>
@@ -27,7 +27,7 @@ CV Maker es una aplicación que **te ayudará a crear un CV de alto impacto para
 <a href="https://ui.shadcn.com/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/Shadcn/UI-282C34?style=for-the-badge&logo=shadcnui&labelColor=000&logoColor=fff" alt="shadcn/ui logo" title="shadcn/ui" />
 </a>
-</div>
+</p>
 
 ## 🚧 Contribuidores
 
