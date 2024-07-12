@@ -12,15 +12,15 @@
   },
   "lint-staged": {
     "./**/*.{js,mjs,cjs}": [
-      "eslint --cache --fix --ext .js,.mjs,.cjs ./",
+      "eslint --cache --fix",
       "prettier --cache --write \"./**/*.{js,mjs,cjs}\""
     ],
     "./**/*.ts": [
-      "eslint --cache --fix --ext .ts ./",
+      "eslint --cache --fix",
       "prettier --cache --write \"./**/*.ts\""
     ],
     "./src/**/*.{jsx,tsx}": [
-      "eslint --cache --fix --ext .jsx,.tsx ./src",
+      "eslint --cache --fix",
       "prettier --cache --write \"./src/**/*.{jsx,tsx}\""
     ],
     "./src/**/*.css": "prettier --cache --write \"./src/**/*.css\"",
