@@ -13,20 +13,15 @@ CV Maker es una aplicación que **te ayudará a crear un CV de alto impacto para
 
 <p align="center">
 <a href="https://vitejs.dev/" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/badge/Vite-282C34?style=for-the-badge&logo=vite&labelColor=646CFF&logoColor=FFF" alt="Vite logo" title="Vite" />
-</a>
+    <img src="https://img.shields.io/badge/Vite-282C34?style=for-the-badge&logo=vite&labelColor=646CFF&logoColor=FFF" alt="Vite logo" title="Vite" /></a>
 <a href="https://expressjs.com/" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/badge/Express.js-282C34?style=for-the-badge&logo=express&labelColor=000&logoColor=FFF" alt="Express JS logo" title="Express JS" />
-</a>
+    <img src="https://img.shields.io/badge/Express.js-282C34?style=for-the-badge&logo=express&labelColor=000&logoColor=FFF" alt="Express JS logo" title="Express JS" /></a>
 <a href="https://es.react.dev/" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/badge/React-282C34?style=for-the-badge&logo=react&labelColor=61DAFB&logoColor=fff" alt="React logo" title="React" />
-</a>
+    <img src="https://img.shields.io/badge/React-282C34?style=for-the-badge&logo=react&labelColor=61DAFB&logoColor=fff" alt="React logo" title="React" /></a>
 <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/badge/Typescript-282C34?style=for-the-badge&logo=typescript&labelColor=007ACC&logoColor=fff" alt="TypeScript logo" title="TypeScript" />
-</a>
+    <img src="https://img.shields.io/badge/Typescript-282C34?style=for-the-badge&logo=typescript&labelColor=007ACC&logoColor=fff" alt="TypeScript logo" title="TypeScript" /></a>
 <a href="https://ui.shadcn.com/" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/badge/Shadcn/UI-282C34?style=for-the-badge&logo=shadcnui&labelColor=000&logoColor=fff" alt="shadcn/ui logo" title="shadcn/ui" />
-</a>
+    <img src="https://img.shields.io/badge/Shadcn/UI-282C34?style=for-the-badge&logo=shadcnui&labelColor=000&logoColor=fff" alt="shadcn/ui logo" title="shadcn/ui" /></a>
 </p>
 
 ## 🚧 Contribuidores
