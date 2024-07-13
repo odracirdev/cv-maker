@@ -18,14 +18,17 @@ CV Maker es una aplicación que **te ayudará a crear un CV de alto impacto para
     <img src="https://img.shields.io/badge/Express.js-282C34?style=for-the-badge&logo=express&labelColor=000&logoColor=FFF" alt="Express JS logo" title="Express JS" /></a>
 <a href="https://es.react.dev/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/React-282C34?style=for-the-badge&logo=react&labelColor=61DAFB&logoColor=fff" alt="React logo" title="React" /></a>
+<a href="hhttps://ollama.com/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/Ollama-282C34?style=for-the-badge&logo=meta&labelColor=0467DF&logoColor=fff" alt="ollama logo" title="ollama" /></a>
 </p>
 <p align="center">
+<a href="https://lenguajejs.com/javascript/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/jsJavascript-282C34?style=for-the-badge&logo=javascript&labelColor=F7DF1E&logoColor=000" alt="ollama logo" title="ollama" /></a>
 <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/Typescript-282C34?style=for-the-badge&logo=typescript&labelColor=007ACC&logoColor=fff" alt="TypeScript logo" title="TypeScript" /></a>
 <a href="https://ui.shadcn.com/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/Shadcn/UI-282C34?style=for-the-badge&logo=shadcnui&labelColor=000&logoColor=fff" alt="shadcn/ui logo" title="shadcn/ui" /></a>
-<a href="https://ui.shadcn.com/" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/badge/Ollama-282C34?style=for-the-badge&logo=meta&labelColor=0467DF&logoColor=fff" alt="ollama logo" title="ollama" /></a>
+
 </p>
 
 ## 🚧 Contribuidores
