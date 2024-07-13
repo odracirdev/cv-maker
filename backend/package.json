@@ -11,7 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ai": "3.2.22",
     "cors": "2.8.5",
-    "express": "4.19.2"
+    "express": "4.19.2",
+    "ollama-ai-provider": "0.10.0"
   }
 }
