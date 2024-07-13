@@ -28,7 +28,6 @@ CV Maker es una aplicación que **te ayudará a crear un CV de alto impacto para
     <img src="https://img.shields.io/badge/Typescript-282C34?style=for-the-badge&logo=typescript&labelColor=007ACC&logoColor=fff" alt="TypeScript logo" title="TypeScript" /></a>
 <a href="https://ui.shadcn.com/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/Shadcn/UI-282C34?style=for-the-badge&logo=shadcnui&labelColor=000&logoColor=fff" alt="shadcn/ui logo" title="shadcn/ui" /></a>
-
 </p>
 
 ## 🚧 Contribuidores
@@ -41,7 +40,7 @@ CV Maker es una aplicación que **te ayudará a crear un CV de alto impacto para
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/odracirdev">
+      <a href="https://github.com/facundodandrea">
          <img src="https://avatars.githubusercontent.com/u/71223579" width="80" />
        </a>
     </td>
