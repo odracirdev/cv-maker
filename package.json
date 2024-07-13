@@ -28,5 +28,24 @@
   "dependencies": {
     "turbo": "2.0.6"
   },
+  "devDependencies": {
+    "@commitlint/cli": "19.3.0",
+    "@commitlint/config-conventional": "19.2.2",
+    "@eslint/js": "9.6.0",
+    "@ianvs/prettier-plugin-sort-imports": "4.3.0",
+    "@typescript-eslint/eslint-plugin": "7.13.1",
+    "@typescript-eslint/parser": "7.13.1",
+    "eslint": "8.57.0",
+    "eslint-config-love": "54.0.0",
+    "eslint-plugin-react": "7.34.3",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "eslint-plugin-react-refresh": "0.4.7",
+    "globals": "15.8.0",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.7",
+    "prettier": "3.3.2",
+    "typescript": "5.2.2",
+    "typescript-eslint": "7.16.0"
+  },
   "packageManager": "pnpm@9.2.0"
 }
