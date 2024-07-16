@@ -1,18 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/home/Home';
-import Chat from './pages/chat/Chat';
-import './App.css';
+import React from 'react'
+import Chat from './components/Chat/Chat'
 
-const App: React.FC = () => {
+export default function App() {
   return (
-    <Router>
-      <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/chat" element={<Chat />} />
-      </Routes>
-    </Router>
-  );
-};
+    <>
+      <Chat />
+    </>
+  )
+}
 
-export default App;
