@@ -18,13 +18,22 @@ const askQuestion = (query) => {
 const main = async () => {
   console.log("Inicia la conversación con Ollama. Aprieta Ctrl+C para salir.");
 
-  // Creacion del contexto y lectura del archivo context.txt
+  // Cargar el contexto desde el archivo
   let context = '';
   try {
     context = await fs.readFile('./context.txt', 'utf-8');
   } catch (error) {
     console.error('Error al leer el archivo de contexto:', error);
     return;
+  }
+
+  // Leer el historial desde el archivo si existe, de lo contrario, inicializarlo como un objeto con una propiedad `messages` vacía
+  let history = { messages: [] };
+  try {
+    const historyContent = await fs.readFile('./history.json', 'utf-8');
+    history = JSON.parse(historyContent);
+  } catch (error) {
+    console.error('No se pudo leer el archivo de historial, se creará uno nuevo.', error);
   }
 
   let running = true;
@@ -37,9 +46,23 @@ const main = async () => {
       const result = await generateText({
         model,
         prompt,
-        context
+        system: context,
+        history: history.messages
       });
-      console.log(`Ollama: ${result.text}`);
+      const response = result.text;
+      console.log(`Ollama: ${response}`);
+
+      // Guardar en el historial con la estructura deseada
+      history.messages.push(
+        { role: 'user', content: prompt },
+        { role: 'assistant', content: response }
+      );
+
+      // Escribir el historial en el archivo
+      await fs.writeFile('./history.json', JSON.stringify(history, null, 2));
+
+      // Actualizar el contexto con la última respuesta
+      context = result.context;
     } catch (error) {
       console.error('Error al generar texto:', error);
     }
@@ -56,4 +79,4 @@ main();
  * modificar su funcionalidad para conectarlo con el front
  *
  * Retocar el archivo context.txt para darle mas o menos contexto
-*/
+ */
