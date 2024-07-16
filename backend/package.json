@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch .env src/index.js"
+    "dev": "node --watch --env-file=.env src/index.js"
   },
   "keywords": [],
   "author": "",
