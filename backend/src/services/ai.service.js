@@ -15,15 +15,13 @@ export const ask = async prompt => {
       model,
       prompt,
       system: context,
-      history: history.messages
+      history
     })
     const response = result.text
 
     // Escribir el historial en la bd
-    addToHistory(
-      { role: 'user', content: prompt },
-      { role: 'assistant', content: response }
-    )
+    addToHistory({ role: 'user', content: prompt })
+    addToHistory({ role: 'assistant', content: response })
 
     // Actualizar el contexto con la última respuesta 🚩❓
     return response
