@@ -1,0 +1,9 @@
+@API_URL = {{$dotenv API_URL}}
+
+### POST ask - Ask a question to the IA
+POST {{API_URL}}/ai/ask
+Content-Type: application/json
+
+{
+  "prompt": "Hola"
+}
