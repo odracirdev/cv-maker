@@ -1,6 +1,7 @@
 import React from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
+import './index.css';
 
 export default function Chat() {
   return (
@@ -22,7 +23,7 @@ export default function Chat() {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"/></svg>
           </Button>
         </div>
-        <div className="p-6 pt-0">
+        <div className="p-6 pt-0 chat-container">
           <div className='space-y-4'>
             <div className="flex w-max max-w-[75%] flex-col gap-2 px-3 py-2 text-sm bg-gray-700 rounded-xl text-white">
               Hi, how can I help you today?
@@ -87,7 +88,7 @@ export default function Chat() {
           </div>
         </div>
       </div>
-      <div className='flex items-center p-6 pt-0'>
+      <div className='flex items-center px-6 py-4'>
         <form className='flex w-full items-center space-x-2'>
           <input className="flex h-10 w-full rounded-xl border px-3 py-2 text-sm file:border-0 file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 flex-1 bg-transparent" id="message" placeholder="Type your message..." autoComplete="off" value=""></input>
           <Button variant="ghost" size="icon" className="text-white flex items-center justify-center whitespace-nowrap rounded-full h-10 w-10 hover:text-gray-700">
