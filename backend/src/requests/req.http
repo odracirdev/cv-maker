@@ -1,5 +1,0 @@
-### Backend
-GET http://localhost:3000
-
-### Ollama
-GET http://localhost:11434
