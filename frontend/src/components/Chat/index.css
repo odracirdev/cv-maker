@@ -1,0 +1,7 @@
+.chat-container {
+  --avatar-height: 94px;
+  --chat-height: 64px;
+
+  height: calc(100vh - var(--avatar-height) - var(--chat-height));
+  overflow-y: auto;
+}
