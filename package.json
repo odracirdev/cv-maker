@@ -26,6 +26,7 @@
     "./**/*.yml": "prettier --cache --write \"./**/*.yml\""
   },
   "dependencies": {
+    "@types/dom-speech-recognition": "0.0.4",
     "turbo": "2.0.6"
   },
   "devDependencies": {
