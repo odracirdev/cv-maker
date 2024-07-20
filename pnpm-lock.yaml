@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@types/dom-speech-recognition':
+        specifier: 0.0.4
+        version: 0.0.4
       turbo:
         specifier: 2.0.6
         version: 2.0.6
@@ -1024,6 +1027,9 @@ packages:
 
   '@types/diff-match-patch@1.0.36':
     resolution: {integrity: sha512-xFdR6tkm0MWvBfO8xXCSsinYxHcqkQUlcHeSpMC2ukzOb6lwQAfDmW+Qt0AvlGd8HpsS28qKsB+oPeJn9I39jg==}
+
+  '@types/dom-speech-recognition@0.0.4':
+    resolution: {integrity: sha512-zf2GwV/G6TdaLwpLDcGTIkHnXf8JEf/viMux+khqKQKDa8/8BAUtXXZS563GnvJ4Fg0PBLGAaFf2GekEVSZ6GQ==}
 
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
@@ -4113,6 +4119,8 @@ snapshots:
       '@types/node': 20.14.10
 
   '@types/diff-match-patch@1.0.36': {}
+
+  '@types/dom-speech-recognition@0.0.4': {}
 
   '@types/estree@1.0.5': {}
 
