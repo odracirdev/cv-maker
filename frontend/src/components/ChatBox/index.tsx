@@ -33,12 +33,11 @@ const ChatBox = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (!inputText) return
     sendMessage(inputText, 'user')
-    console.log('sended: %O', inputText)
-    // Simular respuesta
     setInputText('')
     // Simular respuesta
-    essage(
+    sendMessage(
       'Mi no hablar idioma humano, mi ser Elena Banana, yo ser la super IA.',
       'assistant'
     )
