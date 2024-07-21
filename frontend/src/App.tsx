@@ -1,18 +1,21 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+/* eslint-disable react/react-in-jsx-scope */
 
-import Home from './pages/home/Home'
-import Chat from './components/Chat/Chat'
+import { Route, Routes } from 'react-router-dom'
+import Navbar from './components/Navbar'
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <>
+      <Navbar />
+
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/chat' element={<Chat />} />
+        <Route>
+          <Route index element={<div>Home page</div>} />
+          <Route path="/app" element={<div>App page</div>} />
+        </Route>
       </Routes>
-    </Router>
+    </>
   )
 }
 
-export default App;
+export default App
