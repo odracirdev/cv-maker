@@ -1,9 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import { Route, Routes } from 'react-router-dom'
-import Footer from './components/Footer/index.tsx'
+import Chat from './components/Chat/Chat'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import Home from './pages/Home/index.tsx'
+import Home from './pages/Home'
 
 export default function App() {
   return (
@@ -13,7 +14,7 @@ export default function App() {
       <Routes>
         <Route>
           <Route index element={<Home />} />
-          <Route path="/app" element={<div>App page</div>} />
+          <Route path="/chat" element={<Chat />} />
         </Route>
       </Routes>
 

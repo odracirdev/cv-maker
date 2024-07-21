@@ -18,7 +18,7 @@ export default function Header() {
             mollitia! Illo, dolorum nam!
           </p>
         </div>
-        <ButtonLink href="/app" text="¡Crea tu CV gratis!" />
+        <ButtonLink href="/chat" text="¡Crea tu CV gratis!" />
       </section>
       <section>
         <img className="rounded mx-auto" src="/img/cv.jpg" alt="CV" />
