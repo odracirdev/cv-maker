@@ -43,7 +43,7 @@ const useSpeechRecognition = create<SpeechRecognitionStore>()(
           if (recognition){
             recognition.onresult = (event: SpeechRecognitionEvent) => {
               console.log("onresult event: %O", event);
-              recognition.stop();
+              recognition?.stop();
               const transcript = event.results[0][0].transcript;
               get().setTranscript(transcript);
             };
