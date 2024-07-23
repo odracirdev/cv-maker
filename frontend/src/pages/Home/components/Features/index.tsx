@@ -13,7 +13,7 @@ export default function Features() {
           at sed sed mattis.
         </p>
       </div>
-      <section className="grid grid-cols-2 gap-x-[72px] items">
+      <section className="grid grid-cols-2 gap-x-[72px]">
         <div className="px-4 py-6 flex gap-2.5">
           <span>
             <svg fill="none" viewBox="0 0 24 24" width={24}>
