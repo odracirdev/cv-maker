@@ -1,5 +1,5 @@
 import React from 'react'
-import About from './components/About'
+import Contributors from './components/Contributors'
 import Features from './components/Features'
 import Header from './components/Header'
 import Repository from './components/Repository'
@@ -10,7 +10,7 @@ const Home: React.FC = () => {
       <Header />
       <Features />
       <Repository />
-      <About />
+      <Contributors />
     </main>
   )
 }
