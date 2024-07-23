@@ -1,4 +1,3 @@
-;
 /* eslint-disable react/react-in-jsx-scope, react/prop-types */
 
 import { Link } from 'react-router-dom'
@@ -11,7 +10,7 @@ interface ButtonLinkProps {
 const ButtonLink: React.FC<ButtonLinkProps> = ({ text, href }) => {
   return (
     <Link
-      className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors inline-block"
+      className="bg-white text-black py-2 px-4 rounded-[0.375rem] font-medium inline-block"
       to={href}
     >
       {text}
