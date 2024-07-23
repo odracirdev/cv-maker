@@ -1,20 +1,49 @@
-/* eslint-disable react/react-in-jsx-scope */
-
-import { Link } from 'react-router-dom'
+import React from 'react'
+import logo from '../../../public/svg/logo.svg'
+import dot from '../../../public/svg/dot.svg'
+import { Link, NavLink } from 'react-router-dom'
 import ButtonLink from '../ButtonLink'
+import './styles.css'
+
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 border-b border-neutral-800 py-6 bg-neutral-900/90 backdrop-blur-sm">
-      <div className="container mx-auto px-4 flex justify-between">
-        <Link
-          className="font-bold text-2xl hover:text-blue-500 transition-colors"
-          to="/"
-        >
-          CV Maker
-        </Link>
-        <ButtonLink href="/app" text="Inicia Ahora" />
-      </div>
-    </nav>
+    <>
+    <header className='w-fit top-9 relative flex px-5 py-3 mx-auto justify-center items-center gap-12 rounded-[8px] bg-[#00000080] border-[0.2px] border-[#404040]'>
+      <Link to="/">
+    <img 
+    src={logo}
+    />
+      </Link>
+
+      <nav id='navbar' className='flex justify-between items-center gap-4'>
+        <ul className='list-none flex gap-3'>
+          <li>
+            <NavLink to="/" className={({ isActive }) => `nav-item${isActive ? ' active' : ''}`}>Inicio</NavLink>
+            </li> 
+
+        <img
+        src={dot}
+        />
+        <li className='list-none'>
+          <NavLink to="/chat" className={({ isActive }) => `nav-item${isActive ? ' active' : ''}`}>Presentación</NavLink>
+        </li>
+        </ul>
+
+      <ButtonLink 
+      href='#' 
+      text='Dircord'
+      />
+
+      <ButtonLink 
+      href='/chat' 
+      text='Iniciar ahora'
+      />
+        
+      </nav>
+
+    </header>
+    </>
+    
   )
 }
