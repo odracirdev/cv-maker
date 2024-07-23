@@ -26,7 +26,6 @@
     "./**/*.yml": "prettier --cache --write \"./**/*.yml\""
   },
   "dependencies": {
-    "@fontsource-variable/inter": "5.0.19",
     "@types/dom-speech-recognition": "0.0.4",
     "turbo": "2.0.6"
   },
