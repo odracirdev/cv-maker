@@ -13,9 +13,9 @@ export default function Footer() {
           <svg fill="none" viewBox="0 0 140 24" width={140}>
             <path
               fill="currentColor"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M7.3 0a12.6 12.6 0 1 0 12.4 21.8L7.3 0Z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             />
             <path
               fill="currentColor"
