@@ -8,6 +8,7 @@ import SenderButton from './SenderButton'
 type ChatMode = 'text' | 'audio'
 
 const ChatBox = () => {
+  const [loading, setLoading] = useState(false)
   const [inputText, setInputText] = useState('')
   const initialMode = useMemo<ChatMode>(
     () => (inputText ? 'text' : 'audio'),
@@ -31,16 +32,30 @@ const ChatBox = () => {
     }
   }, [recognitionText])
 
+  const askToAPI = async (prompt: string) => {
+    const res = await fetch(`http://localhost:3000/ai/ask`, {
+      method: 'POST',
+      body: JSON.stringify({
+        prompt
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    const data = await res.json()
+    return data.response
+  }
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (!inputText) return
+
     sendMessage(inputText, 'user')
     setInputText('')
-    // Simular respuesta
-    sendMessage(
-      'Mi no hablar idioma humano, mi ser Elena Banana, yo ser la super IA.',
-      'assistant'
-    )
+
+    setLoading(true)
+    askToAPI(inputText)
+      .then((res) => sendMessage(res, 'assistant'))
+      .finally(() => setLoading(false))
   }
 
   return (
@@ -58,6 +73,7 @@ const ChatBox = () => {
             setInputText(e.target.value)
           }}
           maxLength={1000}
+          disabled={loading}
         />
         {showRecorder ? (
           <RecorderButton />
