@@ -1,11 +1,13 @@
 /* eslint-disable react/react-in-jsx-scope */
 
-import { Button } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
+import './index.css'
 
 export default function Repository() {
   return (
-    <article className="py-16 space-y-24">
-      <h2 className="text-4xl font-bold bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent max-w-[906px] mx-auto text-center">
+    <article className="pt-16 pb-32 space-y-24 repository relative">
+      <h2 className="text-[2.5rem] leading-[normal] font-bold bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent max-w-[906px] mx-auto text-center">
         Lorem ipsum dolor sit amet consectetur. Quis orci molestie sed lacus
         mauris tellus.
       </h2>
@@ -13,10 +15,16 @@ export default function Repository() {
         <div className="grid grid-cols-[2fr_1fr] gap-12">
           <section className="bg-neutral-900 py-12 px-9 rounded-[8px] flex items-center justify-between border border-neutral-800">
             <div className="space-y-6">
-              <h3 className="text-3xl bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent font-bold">
+              <h3 className="text-4xl bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent font-bold">
                 Participa por CV maker
               </h3>
-              <Button className="flex gap-1.5 rounded-[6px]" variant="outline">
+              <a
+                href="#"
+                className={cn(
+                  'flex gap-1.5 !rounded-[8px] hover:!bg-neutral-800 transition-colors',
+                  buttonVariants({ variant: 'outline' })
+                )}
+              >
                 <span>
                   <svg fill="none" viewBox="0 0 24 24" width={24}>
                     <path
@@ -28,15 +36,21 @@ export default function Repository() {
                   </svg>
                 </span>
                 <span>GitHub</span>
-              </Button>
+              </a>
             </div>
             <div className="bg-black rounded-[8px] w-[352px] h-[222px]"></div>
           </section>
           <section className="bg-neutral-900 py-12 px-9 rounded-[8px] border border-neutral-800 space-y-6">
-            <h3 className="text-3xl bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent font-bold">
+            <h3 className="text-4xl bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent font-bold">
               Accede a nuestra comunidad de discord
             </h3>
-            <Button className="flex gap-1.5 rounded-[6px]" variant="outline">
+            <a
+              href="#"
+              className={cn(
+                'flex gap-1.5 !rounded-[8px] hover:!bg-neutral-800 transition-colors',
+                buttonVariants({ variant: 'outline' })
+              )}
+            >
               <span>
                 <svg width={24} viewBox="0 0 14 14">
                   <g fill="none" stroke="currentColor">
@@ -55,12 +69,12 @@ export default function Repository() {
                 </svg>
               </span>
               <span>Discord</span>
-            </Button>
+            </a>
           </section>
         </div>
         <div className="bg-neutral-900 py-12 px-9 rounded-[8px] border border-neutral-800 grid grid-cols-2 items-center">
           <div className="space-y-6">
-            <h3 className="text-3xl bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent font-bold">
+            <h3 className="text-4xl bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent font-bold">
               Sobre CV Maker
             </h3>
             <p className="text-neutral-400">
