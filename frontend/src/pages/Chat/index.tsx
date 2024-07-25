@@ -56,8 +56,8 @@ export default function Chat() {
               </Link>
             </section>
 
-            <div className="p-6 pt-0 chat-container">
-              <div className="space-y-4 overflow-x-hidden" ref={chatRef}>
+            <div className="py-7 px-9 chat-container">
+              <div className="space-y-4" ref={chatRef}>
                 {messages.map(({ role, content: { text } }, index) => (
                   <ChatBubble
                     key={`msg-${role}-${index}`}
