@@ -25,10 +25,13 @@ const ChatBubble: FC<ChatBubbleProps> = ({ alignment = 'left', text }) => {
         height={36}
       />
       <div
-        className={`space-y-2 ${cn({
-          'bg-zinc-800 text-white p-4 rounded-[6px] w-fit ml-auto':
-            alignment === 'right'
-        })}`}
+        className={cn([
+          'space-y-2',
+          {
+            'bg-zinc-800 text-white p-4 rounded-[6px] w-fit ml-auto':
+              alignment === 'right'
+          }
+        ])}
       >
         {
           text.split('\n\n').map((paragraph, index) => (
