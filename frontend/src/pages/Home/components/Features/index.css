@@ -1,0 +1,9 @@
+.items-container::before {
+  content: '';
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  background-color: theme(backgroundColor.neutral.800);
+}

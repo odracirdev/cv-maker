@@ -1,9 +1,9 @@
 import React from 'react'
-import Footer from '../../components/Footer'
-import Navbar from '../../components/Navbar'
-import About from './components/About'
+import Contributors from './components/Contributors'
 import Features from './components/Features'
+import Footer from '../../components/Footer'
 import Header from './components/Header'
+import Navbar from '../../components/Navbar'
 import Repository from './components/Repository'
 
 const Home: React.FC = () => {
@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         <Header />
         <Features />
         <Repository />
-        <About />
+        <Contributors />
       </main>
       <Footer />
     </>
