@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { AuroraBackground } from '@/components/ui/aurora-background'
+import { Button } from '@/components/ui/button'
 import ChatBox from '../../components/ChatBox'
 import ChatBubble from '../../components/ChatBubble'
 import useChat from '../../contexts/chat'
@@ -36,7 +37,7 @@ export default function Chat() {
       <div className="h-screen w-screen overflow-hidden grid grid-cols-2 divide-x divide-neutral-700">
         <section>
           <div>
-            <section className="py-7 px-9 border-b border-neutral-700">
+            <section className="py-7 px-9 border-b border-neutral-700 h-[90px]">
               <Link
                 to="/"
                 className="text-neutral-400 flex items-center gap-4 hover:text-white transition-colors"
@@ -75,7 +76,14 @@ export default function Chat() {
         </section>
 
         <section>
-          <p>CV</p>
+          <section className="py-7 px-9 border-b border-neutral-700 h-[90px] flex justify-between items-center">
+            <p className="text-[1.5rem] relative z-10">
+              Previsualización de CV
+            </p>
+            <Button className="bg-white text-black py-2 px-4 rounded-[0.375rem] font-medium inline-block relative z-10">
+              Descargar CV
+            </Button>
+          </section>
         </section>
       </div>
     </>
