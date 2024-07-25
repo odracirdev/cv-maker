@@ -11,9 +11,7 @@ import Repository from './components/Repository'
 export default function Home() {
   return (
     <>
-      <AuroraBackground className="absolute w-full h-screen top-0 left-0 opacity-80">
-        <div />
-      </AuroraBackground>
+      <AuroraBackground className="absolute w-full h-screen top-0 left-0 opacity-80" />
 
       <Navbar />
 
