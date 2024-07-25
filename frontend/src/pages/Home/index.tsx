@@ -1,24 +1,30 @@
-import React from 'react'
+/* eslint-disable react/react-in-jsx-scope */
+
+import { AuroraBackground } from '@/components/ui/aurora-background'
+import Footer from '../../components/Footer'
+import Navbar from '../../components/Navbar'
 import Contributors from './components/Contributors'
 import Features from './components/Features'
-import Footer from '../../components/Footer'
 import Header from './components/Header'
-import Navbar from '../../components/Navbar'
 import Repository from './components/Repository'
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
     <>
+      <AuroraBackground className="absolute w-full h-screen top-0 left-0 opacity-80">
+        <div />
+      </AuroraBackground>
+
       <Navbar />
+
       <main className="container mx-auto px-4">
         <Header />
         <Features />
         <Repository />
         <Contributors />
       </main>
+
       <Footer />
     </>
   )
 }
-
-export default Home
