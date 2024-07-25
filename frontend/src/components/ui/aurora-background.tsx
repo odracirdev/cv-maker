@@ -2,14 +2,16 @@ import React, { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
-  children: ReactNode
+  children?: ReactNode
   showRadialGradient?: boolean
+  pause?: boolean
 }
 
 export const AuroraBackground = ({
   className,
   children,
   showRadialGradient = true,
+  pause = false,
   ...props
 }: AuroraBackgroundProps) => {
   return (
@@ -23,7 +25,6 @@ export const AuroraBackground = ({
       >
         <div className="absolute inset-0 overflow-hidden">
           <div
-            //   I'm sorry but this is what peak developer performance looks like // trigger warning
             className={cn(
               `
             [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--white)_16%)]
@@ -42,7 +43,9 @@ export const AuroraBackground = ({
             absolute -inset-[10px] opacity-50 will-change-transform`,
 
               showRadialGradient &&
-                `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`
+                `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`,
+
+              pause && `after:[animation-play-state:paused]`
             )}
           ></div>
         </div>

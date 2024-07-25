@@ -13,7 +13,7 @@ const INITIAL_STATE: ChatState = {
   messages: [
     {
       role: 'assistant',
-      content: { type: 'text', text: 'Hi, how can I help you today?' }
+      content: { type: 'text', text: 'Hola, ¿en qué puedo ayudarte hoy?' }
     }
   ]
 }
