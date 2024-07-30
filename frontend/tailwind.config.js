@@ -1,7 +1,5 @@
-const plugin = require('tailwindcss/plugin')
-const {
-  default: flattenColorPalette
-} = require('tailwindcss/lib/util/flattenColorPalette')
+import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
+import plugin from 'tailwindcss/plugin'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -23,6 +21,10 @@ module.exports = {
       }
     },
     extend: {
+      backgroundImage: {
+        'gradient-radial':
+          'radial-gradient(ellipse at 50% 50%,#ffffff3d 0%,#99999900 60%)'
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
