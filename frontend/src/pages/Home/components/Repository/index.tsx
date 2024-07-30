@@ -6,22 +6,22 @@ import './index.css'
 
 export default function Repository() {
   return (
-    <article className="pt-16 pb-32 space-y-24 repository relative">
-      <h2 className="text-[2.5rem] leading-[normal] font-bold bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent max-w-[906px] mx-auto text-center">
+    <article className="pt-16 lg:pb-32 space-y-24 relative lg:responsive">
+      <h2 className="text-[2.5rem] leading-[normal] font-bold bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent lg:max-w-[906px] mx-auto text-center">
         Lorem ipsum dolor sit amet consectetur. Quis orci molestie sed lacus
         mauris tellus.
       </h2>
       <div className="space-y-12">
-        <div className="grid grid-cols-[2fr_1fr] gap-12">
-          <section className="bg-neutral-900 py-12 px-9 rounded-[8px] flex items-center justify-between border border-neutral-800">
-            <div className="space-y-6">
+        <div className="gap-8 flex flex-col lg:grid lg:grid-cols-[2fr_1fr] lg:gap-12">
+          <section className="bg-neutral-900 flex-col lg:py-12 lg:px-9 rounded-[8px] flex lg:items-center lg:justify-between border border-neutral-800 py-8 items-center">
+            <div className="space-y-6 text-center py-6">
               <h3 className="text-4xl bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent font-bold">
                 Participa por CV maker
               </h3>
               <a
                 href="#"
                 className={cn(
-                  'flex gap-1.5 !rounded-[8px] hover:!bg-neutral-800 transition-colors',
+                  'w-[90%] md:w-[30%] flex gap-1.5 !rounded-[8px] hover:!bg-neutral-800 transition-colors',
                   buttonVariants({ variant: 'outline' })
                 )}
               >
@@ -38,7 +38,7 @@ export default function Repository() {
                 <span>GitHub</span>
               </a>
             </div>
-            <div className="bg-black rounded-[8px] w-[352px] h-[222px]"></div>
+            <div className="bg-black flex rounded-[8px] w-[278px] h-[175px] lg:w-[352px] lg:h-[222px]"></div>
           </section>
           <section className="bg-neutral-900 py-12 px-9 rounded-[8px] border border-neutral-800 space-y-6">
             <h3 className="text-4xl bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent font-bold">
@@ -47,7 +47,7 @@ export default function Repository() {
             <a
               href="#"
               className={cn(
-                'flex gap-1.5 !rounded-[8px] hover:!bg-neutral-800 transition-colors',
+                'w-[90%] md:w-fit flex gap-1.5 !rounded-[8px] hover:!bg-neutral-800 transition-colors',
                 buttonVariants({ variant: 'outline' })
               )}
             >
@@ -72,12 +72,12 @@ export default function Repository() {
             </a>
           </section>
         </div>
-        <div className="bg-neutral-900 py-12 px-9 rounded-[8px] border border-neutral-800 grid grid-cols-2 items-center">
-          <div className="space-y-6">
-            <h3 className="text-4xl bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent font-bold">
+        <div className="bg-neutral-900 py-12 px-9 md:px-5 rounded-[8px] border border-neutral-800 lg:grid lg:grid-cols-2 items-center">
+          <div className="lg:space-y-6 text-center py-4">
+            <h3 className="pb-4 text-4xl bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent font-bold">
               Sobre CV Maker
             </h3>
-            <p className="text-neutral-400">
+            <p className="text-neutral-400 text-center">
               Lorem ipsum dolor sit amet consectetur. Rhoncus pretium amet
               sodales ut egestas. Mattis sem faucibus orci lorem sagittis velit
               cursus tempor. Odio aenean amet sed cursus enim at nullam nunc
@@ -86,7 +86,7 @@ export default function Repository() {
               Fames mus id aliquet ut aliquam.
             </p>
           </div>
-          <div className="bg-black rounded-[8px] w-[485px] h-[318px] ml-auto"></div>
+          <div className="bg-black rounded-[8px] lg:w-[485px] lg:h-[318px] mx-auto w-[278px] h-[182px] lg:w-"></div>
         </div>
       </div>
     </article>

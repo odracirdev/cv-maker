@@ -4,7 +4,7 @@ import './index.css'
 
 export default function Features() {
   return (
-    <article className="pt-12 pb-44 space-y-[72px]">
+    <article className="lg:pt-12 lg:pb-44 space-y-[72px]">
       <div className="space-y-6 text-center">
         <h2 className="text-[2.5rem] font-bold bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent">
           Lorem ipsum dolor sit amet
@@ -15,7 +15,7 @@ export default function Features() {
           at sed sed mattis.
         </p>
       </div>
-      <section className="grid grid-cols-2 gap-x-[72px] relative items-container">
+      <section className="lg:grid lg:grid-cols-2 lg:gap-x-[72px] lg:relative lg:items-container">
         <div className="px-4 py-6 flex gap-2.5 border-t border-b border-neutral-800">
           <span>
             <svg fill="none" viewBox="0 0 24 24" width={24}>

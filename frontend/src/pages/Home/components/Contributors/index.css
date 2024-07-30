@@ -1,3 +1,5 @@
+
+@media(width >= 50rem){
 .contributors-container::before {
   content: '';
   width: 1px;
@@ -6,4 +8,5 @@
   left: 50%;
   translate: -50% 0;
   background-color: theme(backgroundColor.neutral.800);
+  } 
 }

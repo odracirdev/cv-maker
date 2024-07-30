@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer className="py-6 border-t border-neutral-800">
-      <div className="container mx-auto flex items-center justify-between">
+    <footer className="lg:py-6 py-4 border-t border-neutral-800">
+      <div className="container lg:mx-auto flex max-[800px]:flex-col items-center justify-between">
         <Link
-          className="font-bold text-2xl hover:text-blue-500 transition-colors"
+          className="pb-4 font-bold text-2xl hover:text-blue-500 transition-colors"
           to="/"
         >
           <svg fill="none" viewBox="0 0 140 24" width={140}>
