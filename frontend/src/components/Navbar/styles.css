@@ -1,22 +1,63 @@
-#navbar .nav-item{
-  padding: 0.5rem;
-  color: #b1b3d0;
-  background: transparent;
-  transition: color 0.2s ease, background 0.2s ease;
+.navlink {
+  @apply p-2 bg-transparent transition-colors duration-300 text-[#b1b3d0];
 
-  &.active, 
-  &:hover, 
-  &:focus, 
-  &:active {
-    position: relative;
-    color: white;
-    overflow: visible;
-    background: radial-gradient(
-        ellipse at 50% 50%,
-        #ffffff3d 0%,
-        #99999900 60%
-      );
-  
-   
+  &.active,
+  &:active,
+  &:hover,
+  &:focus {
+    @apply text-white relative overflow-visible bg-gradient-radial;
   }
+}
+
+/* ---- mobile menu ---- */
+.button-mobile-menu {
+  @apply relative bottom-[1px] z-20 w-8 rotate-0 cursor-pointer transition-all duration-300 ease-in-out;
+
+  /* hamburger menu*/
+  & .bars {
+    @apply absolute block w-[1.2rem] h-[2px] bg-white rotate-0 opacity-100 transition-all duration-300 ease-in-out;
+
+    &.bar-middle {
+      @apply inset-y-2;
+    }
+
+    &.bar-bottom {
+      @apply inset-y-4;
+    }
+  }
+
+  &.button-mobile-menu-open {
+    @apply relative;
+
+    & .bar-top {
+      @apply rotate-[135deg] translate-y-2;
+    }
+
+    & .bar-middle {
+      @apply opacity-0;
+    }
+
+    & .bar-bottom {
+      @apply -rotate-[135deg] -translate-y-2;
+    }
+
+  }
+}
+
+.navbar {
+  @apply flex flex-col p-4 lg:p-0 lg:flex-row gap-4 lg:justify-between lg:items-center absolute left-0 lg:relative;
+
+  @media (width <=48rem) {
+    &.navbar-mobile-show {
+      @apply bg-black/80 backdrop-blur-sm translate-y-7 transition-all duration-300 ease-in-out w-full h-screen;
+    }
+
+    &.navbar-mobile-hide {
+      @apply transition-all duration-300 ease-in-out inset-0 w-full h-full -translate-y-[300px];
+    }
+  }
+}
+
+body:has(.navbar-mobile-show) {
+  @apply overflow-hidden;
 }
