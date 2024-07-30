@@ -5,11 +5,11 @@ import './index.css'
 export default function About() {
   return (
     <article className="pb-20 pt-32 space-y-[104px]">
-      <h2 className="text-[2.5rem] leading-[normal] font-bold bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent max-w-[906px] mx-auto text-center">
+      <h2 className="text-[2.5rem] leading-[normal] font-bold bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent lg:max-w-[906px] mx-auto text-center">
         Lorem ipsum dolor sit amet consectetur. Quis orci molestie sed lacus
         mauris tellus.
       </h2>
-      <section className="grid grid-cols-2 gap-x-[72px] max-w-[920px] mx-auto contributors-container relative">
+      <section className="lg:grid lg:grid-cols-2 gap-x-[72px] max-w-[920px] mx-auto contributors-container relative">
         <div className="flex gap-[10px] items-center py-6 px-4 border-t border-neutral-800">
           <img className="rounded-[4px]" src="/img/ana.png" alt="Ana" />
           <div className="space-y-2.5">
@@ -375,7 +375,7 @@ export default function About() {
           </div>
         </div>
         <div className="flex gap-[10px] items-center py-6 px-4 border-y border-neutral-800">
-          <p className="flex items-center gap-2 text-xl font-medium">
+          <p className="flex items-center gap-2 md:text-xl font-medium">
             <span className="bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent">
               Hecho con
             </span>
