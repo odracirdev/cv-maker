@@ -9,21 +9,20 @@ export const ask = async prompt => {
   const context = await getContext()
   const history = await getHistory()
 
+  addToHistory({ role: 'user', content: prompt })
+
   try {
     // Hacer consulta a la IA
     const result = await generateText({
       model,
-      prompt,
       system: context,
-      history
+      messages: history,
     })
     const response = result.text
 
     // Escribir el historial en la bd
-    addToHistory({ role: 'user', content: prompt })
     addToHistory({ role: 'assistant', content: response })
 
-    // Actualizar el contexto con la última respuesta 🚩❓
     return response
   } catch (err) {
     error('Error al generar texto:', err)
