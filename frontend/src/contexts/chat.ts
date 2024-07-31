@@ -11,17 +11,22 @@ type ChatState = {
 type ChatActions = {
   appendTextMessage(msg: string, role: RoleMessage): void
   setLoading(loading: boolean): void
+  init(): Promise<void>
 }
 
 type ChatStore = ChatState & ChatActions
 
+const fetchMessages = (): Promise<Message[]> => {
+  return fetch('http://localhost:3000/ai/messages')
+    .then(res => res.json())
+    .catch(err => {
+      console.error('Error while fetching messages', err)
+      return []
+    })
+}
+
 const INITIAL_STATE: ChatState = {
-  messages: [
-    {
-      role: 'assistant',
-      content: { type: 'text', text: 'Hola, ¿en qué puedo ayudarte hoy?' }
-    }
-  ],
+  messages: [],
   loading: false
 }
 
@@ -32,8 +37,7 @@ const useChat = create<ChatStore>()(
       appendTextMessage: (msg, role) =>
         set(
           (state) => {
-            state.messages.push({ role, content: { type: 'text', text: msg } })
-            // state.loading = false
+            state.messages.push({ role, content: msg })
           },
           false,
           'appendTextMessage'
@@ -45,7 +49,16 @@ const useChat = create<ChatStore>()(
           },
           false,
           'setLoading'
+        ),
+      init: async () => {
+        const messages = await fetchMessages()
+        set((state) => {
+          state.messages = messages
+        },
+          false,
+          'initChat'
         )
+      }
     }))
   )
 )

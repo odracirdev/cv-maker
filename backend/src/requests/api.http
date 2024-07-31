@@ -7,3 +7,6 @@ Content-Type: application/json
 {
   "prompt": "Hola"
 }
+
+### GET history - Get the messages history
+GET {{API_URL}}/ai/messages
