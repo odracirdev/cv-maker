@@ -1,7 +1,14 @@
 .chat-container {
-  --avatar-height: 94px;
-  --chat-height: 64px;
+  --header-height: 90px;
+  --chat-height: 72px;
 
-  height: calc(100vh - var(--avatar-height) - var(--chat-height));
+  height: calc(100vh - var(--header-height) - var(--chat-height));
+  overflow-y: auto;
+}
+
+.cv-container {
+  --header-height: 90px;
+
+  height: calc(100vh - var(--header-height));
   overflow-y: auto;
 }
