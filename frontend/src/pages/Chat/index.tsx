@@ -4,6 +4,7 @@ import CVView from '@/components/CVView'
 import Loader from '@/components/Loader'
 import { AuroraBackground } from '@/components/ui/aurora-background'
 import { Button } from '@/components/ui/button'
+import Welcome from '@/components/Welcome'
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import ChatBox from '../../components/ChatBox'
@@ -66,10 +67,12 @@ export default function Chat() {
             </section>
 
             <div className="py-7 px-9 chat-container">
-              <div className="space-y-4" ref={chatRef}>
-                {messages.map(({ role, content }, index) => (
-                  <ChatBubble
-                    key={`msg-${role}-${index}`}
+              <div className="space-y-4 size-full" ref={chatRef}>
+                {!messages.length
+                  ? <Welcome />
+                  : messages.map(({ role, content }, index) => (
+                    <ChatBubble
+                      key={`msg-${role}-${index}`}
                       text={content}
                       alignment={role === 'assistant' ? 'left' : 'right'}
                     />

@@ -2,12 +2,11 @@ import React from 'react'
 
 type LogoProps = {
   width?: number
-  height?: number
 }
 
-const Logo: React.FC = ({ width = 140, height = 24 }: LogoProps) => {
+const Logo: React.FC<LogoProps> = ({ width = 140}: LogoProps) => {
   return (
-    <svg fill="none" viewBox="0 0 140 24" width={width} height={height}>
+    <svg fill="none" viewBox="0 0 140 24" width={width}>
       <path
         fill="currentColor"
         fillRule="evenodd"
