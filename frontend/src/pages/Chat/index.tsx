@@ -1,21 +1,22 @@
 /* eslint-disable react/react-in-jsx-scope */
 
-import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import CVView from '@/components/CVView'
+import Loader from '@/components/Loader'
 import { AuroraBackground } from '@/components/ui/aurora-background'
 import { Button } from '@/components/ui/button'
+import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import ChatBox from '../../components/ChatBox'
 import ChatBubble from '../../components/ChatBubble'
 import useChat from '../../contexts/chat'
 import useSpeechRecognition from '../../contexts/speech-recognition'
 import './index.css'
-import Loader from '@/components/Loader'
-import CVView from '@/components/CVView'
 
 export default function Chat() {
   const initSpeechRecognition = useSpeechRecognition((state) => state.init)
   const messages = useChat((state) => state.messages)
   const loading = useChat((state) => state.loading)
+  const initChat = useChat((state) => state.init)
 
   const chatRef = useRef<HTMLDivElement>(null)
 
@@ -29,6 +30,10 @@ export default function Chat() {
       block: 'end'
     })
   }, [messages.length])
+
+  useEffect(() => {
+    initChat()
+  }, [])
 
   return (
     <>
@@ -62,13 +67,14 @@ export default function Chat() {
 
             <div className="py-7 px-9 chat-container">
               <div className="space-y-4" ref={chatRef}>
-                {messages.map(({ role, content: { text } }, index) => (
+                {messages.map(({ role, content }, index) => (
                   <ChatBubble
                     key={`msg-${role}-${index}`}
-                    text={text}
-                    alignment={role === 'assistant' ? 'left' : 'right'}
-                  />
-                ))}
+                      text={content}
+                      alignment={role === 'assistant' ? 'left' : 'right'}
+                    />
+                  ))
+                }
                 {
                   loading && <Loader />
                 }
