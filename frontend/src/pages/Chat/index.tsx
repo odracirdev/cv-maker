@@ -85,7 +85,7 @@ export default function Chat() {
               Descargar CV
             </Button>
           </section>
-          <section className="py-6 px-9 relative">
+          <section className="py-6 px-9 relative cv-container">
             <CVView />
           </section>
         </section>
