@@ -26,9 +26,9 @@ const ChatBubble: FC<ChatBubbleProps> = ({ alignment = 'left', text }) => {
       />
       <div
         className={cn([
-          'space-y-2',
+          'space-y-2 bg-stone-800/30 p-4 rounded-[6px] w-fit',
           {
-            'bg-zinc-800 text-white p-4 rounded-[6px] w-fit ml-auto':
+            'bg-zinc-800 text-white w-fit ml-auto':
               alignment === 'right'
           }
         ])}
