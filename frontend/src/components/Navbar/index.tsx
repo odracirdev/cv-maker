@@ -1,6 +1,8 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import { Link, NavLink } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 import ButtonLink from '../ButtonLink'
 import './styles.css'
@@ -59,25 +61,71 @@ export default function Navbar() {
         </nav>
 
         <div className="space-x-2 hidden md:block">
-          <ButtonLink href="#" text="Discord" />
-          <ButtonLink href="/chat" text="Iniciar ahora" />
+          <ButtonLink className="text-center" href="#" text="Discord" />
+          <ButtonLink
+            className="text-center"
+            href="/chat"
+            text="Iniciar ahora"
+          />
         </div>
 
-        <button
-          className="active:text-neutral-500 transition-colors md:hidden"
-          type="button"
-        >
-          <svg width={26} viewBox="0 0 16 16">
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1.5"
-              d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
-            ></path>
-          </svg>
-        </button>
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button
+              className="active:text-neutral-500 transition-colors p-0 md:hidden"
+              variant="ghost"
+            >
+              <svg width={26} viewBox="0 0 16 16">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                  d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
+                ></path>
+              </svg>
+            </Button>
+          </SheetTrigger>
+          <SheetContent className="bg-neutral-900 border-none flex flex-col gap-6">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                cn([
+                  'p-2',
+                  {
+                    active: isActive,
+                    'text-neutral-500 hover:text-white transition-colors':
+                      !isActive
+                  }
+                ])
+              }
+            >
+              Inicio
+            </NavLink>
+            <NavLink
+              to="/cv-maker"
+              className={({ isActive }) =>
+                cn([
+                  'p-2',
+                  {
+                    active: isActive,
+                    'text-neutral-500 hover:text-white transition-colors':
+                      !isActive
+                  }
+                ])
+              }
+            >
+              Sobre CV Maker
+            </NavLink>
+            <ButtonLink className="text-center" href="#" text="Discord" />
+            <ButtonLink
+              className="text-center"
+              href="/chat"
+              text="Iniciar ahora"
+            />
+          </SheetContent>
+        </Sheet>
       </header>
     </>
   )
