@@ -10,6 +10,7 @@ import useChat from '../../contexts/chat'
 import useSpeechRecognition from '../../contexts/speech-recognition'
 import './index.css'
 import Loader from '@/components/Loader'
+import CVView from '@/components/CVView'
 
 export default function Chat() {
   const initSpeechRecognition = useSpeechRecognition((state) => state.init)
@@ -88,6 +89,9 @@ export default function Chat() {
             <Button className="bg-white text-black py-2 px-4 rounded-[0.375rem] font-medium inline-block relative z-10">
               Descargar CV
             </Button>
+          </section>
+          <section className="py-6 px-9 relative cv-container">
+            <CVView />
           </section>
         </section>
       </div>
