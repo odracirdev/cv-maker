@@ -9,10 +9,12 @@ import ChatBubble from '../../components/ChatBubble'
 import useChat from '../../contexts/chat'
 import useSpeechRecognition from '../../contexts/speech-recognition'
 import './index.css'
+import Loader from '@/components/Loader'
 
 export default function Chat() {
   const initSpeechRecognition = useSpeechRecognition((state) => state.init)
   const messages = useChat((state) => state.messages)
+  const loading = useChat((state) => state.loading)
 
   const chatRef = useRef<HTMLDivElement>(null)
 
@@ -66,6 +68,9 @@ export default function Chat() {
                     alignment={role === 'assistant' ? 'left' : 'right'}
                   />
                 ))}
+                {
+                  loading && <Loader />
+                }
               </div>
             </div>
           </div>

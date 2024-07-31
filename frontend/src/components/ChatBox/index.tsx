@@ -8,13 +8,14 @@ import SenderButton from './SenderButton'
 type ChatMode = 'text' | 'audio'
 
 const ChatBox = () => {
-  const [loading, setLoading] = useState(false)
   const [inputText, setInputText] = useState('')
   const initialMode = useMemo<ChatMode>(
     () => (inputText ? 'text' : 'audio'),
     [inputText]
   )
   const sendMessage = useChat((state) => state.appendTextMessage)
+  const setLoading = useChat((state) => state.setLoading)
+  const loading = useChat((state) => state.loading)
 
   const recognitionText = useSpeechRecognition((state) => state.text)
   const hasRecognitionSupport = useSpeechRecognition(
