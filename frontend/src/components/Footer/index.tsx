@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container lg:mx-auto flex max-[800px]:flex-col items-center justify-between">
         <Link
           className="pb-4 font-bold text-2xl hover:text-blue-500 transition-colors"
-          to="/"
+          to={import.meta.env.PROD === true ? '/cv-maker' : '/'}
         >
           <Logo />
         </Link>

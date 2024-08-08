@@ -1,12 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 
+import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import CVView from '@/components/CVView'
 import Loader from '@/components/Loader'
 import { AuroraBackground } from '@/components/ui/aurora-background'
 import { Button } from '@/components/ui/button'
 import Welcome from '@/components/Welcome'
-import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import ChatBox from '../../components/ChatBox'
 import ChatBubble from '../../components/ChatBubble'
 import useChat from '../../contexts/chat'
@@ -48,7 +48,7 @@ export default function Chat() {
           <div>
             <section className="py-7 px-9 border-b border-neutral-700 h-[90px]">
               <Link
-                to="/"
+                to={import.meta.env.PROD === true ? '/cv-maker' : '/'}
                 className="text-neutral-400 flex items-center gap-4 hover:text-white transition-colors"
               >
                 <span>
@@ -68,19 +68,18 @@ export default function Chat() {
 
             <div className="py-7 px-9 chat-container">
               <div className="space-y-4 size-full" ref={chatRef}>
-                {!messages.length
-                  ? <Welcome />
-                  : messages.map(({ role, content }, index) => (
+                {!messages.length ? (
+                  <Welcome />
+                ) : (
+                  messages.map(({ role, content }, index) => (
                     <ChatBubble
                       key={`msg-${role}-${index}`}
                       text={content}
                       alignment={role === 'assistant' ? 'left' : 'right'}
                     />
                   ))
-                }
-                {
-                  loading && <Loader />
-                }
+                )}
+                {loading && <Loader />}
               </div>
             </div>
           </div>
