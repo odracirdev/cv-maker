@@ -13,7 +13,7 @@ export default function Header() {
           <p className="text-4xl">And this, is chemical burn.</p>
         </div>
         <ButtonLink
-          href="/chat"
+          href={import.meta.env.PROD === true ? '/cv-maker/chat' : '/chat'}
           text="Ir a la demo"
           className="w-full lg:w-fit"
         />

@@ -6,13 +6,11 @@ import Home from './pages/Home'
 
 export default function App() {
   return (
-    <>
-      <Routes>
-        <Route>
-          <Route index element={<Home />} />
-          <Route path="/chat" element={<Chat />} />
-        </Route>
-      </Routes>
-    </>
+    <Routes>
+      <Route path={import.meta.env.PROD === true ? '/cv-maker' : ''}>
+        <Route index element={<Home />} />
+        <Route path="chat" element={<Chat />} />
+      </Route>
+    </Routes>
   )
 }

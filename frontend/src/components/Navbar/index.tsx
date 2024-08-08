@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <>
       <header className="w-full md:w-fit flex items-center justify-between gap-6 px-6 py-6 md:py-3 md:mx-auto md:rounded-[8px] bg-black/40 md:bg-black/75 md:border md:border-[#404040] sticky top-0 md:top-5 backdrop-blur-md z-10">
-        <Link to="/">
+        <Link to={import.meta.env.PROD === true ? '/cv-maker' : '/'}>
           <svg fill="none" viewBox="0 0 140 24" width={100}>
             <path
               fill="currentColor"
@@ -28,7 +28,7 @@ export default function Navbar() {
 
         <nav className="md:flex md:gap-2 md:items-center hidden">
           <NavLink
-            to="/"
+            to={import.meta.env.PROD === true ? '/cv-maker' : '/'}
             className={({ isActive }) =>
               cn([
                 'p-2',
@@ -44,7 +44,7 @@ export default function Navbar() {
           </NavLink>
           <span>•</span>
           <NavLink
-            to="/cv-maker"
+            to="#"
             className={({ isActive }) =>
               cn([
                 'p-2',
@@ -64,7 +64,7 @@ export default function Navbar() {
           <ButtonLink className="text-center" href="#" text="Discord" />
           <ButtonLink
             className="text-center"
-            href="/chat"
+            href={import.meta.env.PROD === true ? '/cv-maker/chat' : '/chat'}
             text="Iniciar ahora"
           />
         </div>
@@ -89,7 +89,7 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent className="bg-neutral-900 border-none flex flex-col gap-6">
             <NavLink
-              to="/"
+              to={import.meta.env.PROD === true ? '/cv-maker' : '/'}
               className={({ isActive }) =>
                 cn([
                   'p-2',
@@ -104,7 +104,7 @@ export default function Navbar() {
               Inicio
             </NavLink>
             <NavLink
-              to="/cv-maker"
+              to="#"
               className={({ isActive }) =>
                 cn([
                   'p-2',
@@ -121,7 +121,7 @@ export default function Navbar() {
             <ButtonLink className="text-center" href="#" text="Discord" />
             <ButtonLink
               className="text-center"
-              href="/chat"
+              href={import.meta.env.PROD === true ? '/cv-maker/chat' : '/chat'}
               text="Iniciar ahora"
             />
           </SheetContent>
