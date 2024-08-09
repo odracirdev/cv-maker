@@ -11,7 +11,15 @@ export default function About() {
       </h2>
       <section className="lg:grid lg:grid-cols-2 gap-x-[72px] max-w-[920px] mx-auto contributors-container relative">
         <div className="flex gap-[10px] items-center py-6 px-4 border-t border-neutral-800">
-          <img className="rounded-[4px]" src="/img/ana.png" alt="Ana" />
+          <img
+            className="rounded-[4px]"
+            src={
+              import.meta.env.PROD === true
+                ? '/cv-maker/img/ana.png'
+                : '/img/ana.png'
+            }
+            alt="Ana"
+          />
           <div className="space-y-2.5">
             <p className="text-xl">
               Ana Rangel <span className="text-neutral-400">UX Designer</span>
@@ -63,7 +71,15 @@ export default function About() {
           </div>
         </div>
         <div className="flex gap-[10px] items-center py-6 px-4 border-t border-neutral-800">
-          <img className="rounded-[4px]" src="/img/ana.png" alt="Ana" />
+          <img
+            className="rounded-[4px]"
+            src={
+              import.meta.env.PROD === true
+                ? '/cv-maker/img/ana.png'
+                : '/img/ana.png'
+            }
+            alt="Ana"
+          />
           <div className="space-y-2.5">
             <p className="text-xl">
               Ana Rangel <span className="text-neutral-400">UX Designer</span>
@@ -115,7 +131,15 @@ export default function About() {
           </div>
         </div>
         <div className="flex gap-[10px] items-center py-6 px-4 border-y border-neutral-800">
-          <img className="rounded-[4px]" src="/img/ana.png" alt="Ana" />
+          <img
+            className="rounded-[4px]"
+            src={
+              import.meta.env.PROD === true
+                ? '/cv-maker/img/ana.png'
+                : '/img/ana.png'
+            }
+            alt="Ana"
+          />
           <div className="space-y-2.5">
             <p className="text-xl">
               Ana Rangel <span className="text-neutral-400">UX Designer</span>
@@ -167,7 +191,15 @@ export default function About() {
           </div>
         </div>
         <div className="flex gap-[10px] items-center py-6 px-4 border-y border-neutral-800">
-          <img className="rounded-[4px]" src="/img/ana.png" alt="Ana" />
+          <img
+            className="rounded-[4px]"
+            src={
+              import.meta.env.PROD === true
+                ? '/cv-maker/img/ana.png'
+                : '/img/ana.png'
+            }
+            alt="Ana"
+          />
           <div className="space-y-2.5">
             <p className="text-xl">
               Ana Rangel <span className="text-neutral-400">UX Designer</span>
@@ -219,7 +251,15 @@ export default function About() {
           </div>
         </div>
         <div className="flex gap-[10px] items-center py-6 px-4">
-          <img className="rounded-[4px]" src="/img/ana.png" alt="Ana" />
+          <img
+            className="rounded-[4px]"
+            src={
+              import.meta.env.PROD === true
+                ? '/cv-maker/img/ana.png'
+                : '/img/ana.png'
+            }
+            alt="Ana"
+          />
           <div className="space-y-2.5">
             <p className="text-xl">
               Ana Rangel <span className="text-neutral-400">UX Designer</span>
@@ -271,7 +311,15 @@ export default function About() {
           </div>
         </div>
         <div className="flex gap-[10px] items-center py-6 px-4">
-          <img className="rounded-[4px]" src="/img/ana.png" alt="Ana" />
+          <img
+            className="rounded-[4px]"
+            src={
+              import.meta.env.PROD === true
+                ? '/cv-maker/img/ana.png'
+                : '/img/ana.png'
+            }
+            alt="Ana"
+          />
           <div className="space-y-2.5">
             <p className="text-xl">
               Ana Rangel <span className="text-neutral-400">UX Designer</span>
@@ -323,7 +371,15 @@ export default function About() {
           </div>
         </div>
         <div className="flex gap-[10px] items-center py-6 px-4 border-y border-neutral-800">
-          <img className="rounded-[4px]" src="/img/ana.png" alt="Ana" />
+          <img
+            className="rounded-[4px]"
+            src={
+              import.meta.env.PROD === true
+                ? '/cv-maker/img/ana.png'
+                : '/img/ana.png'
+            }
+            alt="Ana"
+          />
           <div className="space-y-2.5">
             <p className="text-xl">
               Ana Rangel <span className="text-neutral-400">UX Designer</span>
@@ -381,7 +437,11 @@ export default function About() {
             </span>
             <img
               width={24}
-              src="/img/emoji-heart-fire.webp"
+              src={
+                import.meta.env.PROD === true
+                  ? '/cv-maker/img/emoji-heart-fire.webp'
+                  : '/img/emoji-heart-fire.webp'
+              }
               alt="Emoji Heart Fire"
             />
             <span className="bg-gradient-to-r from-white to-[#949494] bg-clip-text text-transparent">
